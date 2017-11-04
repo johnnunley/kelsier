@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  main.c
+ *       Filename:  string.h
  *
- *    Description:  Main source code file, executed on startup 
+ *    Description:  
  *
- *        Version:  ALPHA.1
- *        Created:  11/03/2017 04:36:42 PM
+ *        Version:  1.0
+ *        Created:  11/03/2017 06:59:51 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -14,7 +14,7 @@
  *   Organization:  JaydomStudios
  *
  * =====================================================================================
- 
+
 This file is part of Kelsier.
 
 Kelsier is free software: you can redistribute it and/or modify
@@ -32,9 +32,4 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 
-#include <stdio.h>
 
-int main(int argc, char **argv) {
-  puts("Welcome to Kelsier Version ALPHA.1");
-  return 0;
-}

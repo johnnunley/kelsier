@@ -22,10 +22,10 @@ set(CMAKE_BUILD_TYPE Release)
 file(GLOB SOURCES "src/*")
 
 # do configuration
-configure_file (
-  "include/Kelsier_config.hpp.in"
-  "include/Kelsier_config.hpp"
-  )
+#configure_file (
+#  "include/Kelsier_config.h.in"
+#  "include/Kelsier_config.h"
+#  )
 
 # compile sources
 add_executable(Kelsier ${SOURCES})
