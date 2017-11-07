@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  version.h
+ *       Filename:  variable.h
  *
- *    Description:  Provides methods that provides version information 
+ *    Description:  
  *
  *        Version:  1.0
- *        Created:  11/03/2017 04:41:52 PM
+ *        Created:  11/04/2017 04:31:16 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -30,17 +30,18 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
-*/
+ */
 
-#ifndef VERSION_H
-#define VERSION_H
+#ifndef VARIABLE_H
+#define VARIABLE_H
 
+#include <vector>
 #include <string>
+#include <map>
 
 using namespace std;
 
-string getVersionMajor();
-string getVersionMinor();
-string getVersion();
+#define VariableTemplate vector<string>
+#define VariableSet map<string,bool>
 
 #endif

@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  version.h
+ *       Filename:  action.h
  *
- *    Description:  Provides methods that provides version information 
+ *    Description:  
  *
  *        Version:  1.0
- *        Created:  11/03/2017 04:41:52 PM
+ *        Created:  11/04/2017 04:05:40 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -14,7 +14,7 @@
  *   Organization:  JaydomStudios
  *
  * =====================================================================================
-
+ 
 This file is part of Kelsier.
 
 Kelsier is free software: you can redistribute it and/or modify
@@ -30,17 +30,30 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
-*/
+ */
 
-#ifndef VERSION_H
-#define VERSION_H
+#ifndef ACTION_H
+#define ACTION_H
 
-#include <string>
+#include "variable.h"
+#include <vector>
 
-using namespace std;
+typedef bool (*Method)(int);
 
-string getVersionMajor();
-string getVersionMinor();
-string getVersion();
+class PreAction {
+  public:
+    Method method;
+    VariableSet variables;
+    PreAction(Method m);
+};
+
+class Action {
+  public:
+    Method method; 
+    VariableSet variables;
+    int score;
+    Action(Method m, int s);
+    Action(PreAction pa, int s);
+};
 
 #endif

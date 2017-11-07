@@ -35,6 +35,7 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 #include "version.h"
 
 #include <iostream>
+using namespace std;
 
 int main(int argc, char **argv) {
   cout << "Welcome to Kelsier Version " <<  getVersion() << "." << endl;

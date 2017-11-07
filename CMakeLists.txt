@@ -18,6 +18,13 @@ cmake_minimum_required(VERSION 2.8.9)
 project(Kelsier)
 set(CMAKE_BUILD_TYPE Release)
 
+set(COMPILE_FLAGS "-Iinclude -pthread -Wsizeof-array-argument")
+set(LINK_FLAGS " ")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${COMPILE_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${LINK_FLAGS}")
+
 # get sources
 file(GLOB SOURCES "src/*")
 

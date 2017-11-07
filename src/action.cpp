@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  string.h
+ *       Filename:  action.cpp
  *
  *    Description:  
  *
  *        Version:  1.0
- *        Created:  11/03/2017 06:59:51 PM
+ *        Created:  11/04/2017 04:51:02 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -32,4 +32,10 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 
+#include "action.h"
 
+PreAction::PreAction(Method m) : method(m) { }
+
+Action::Action(Method m, int s) : method(m), score(s) { }
+
+Action::Action(PreAction pa, int s) : method(pa.method), score(s) { variables = pa.variables; }
