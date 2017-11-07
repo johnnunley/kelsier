@@ -35,5 +35,5 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 #include "version.h"
 
 string getVersionMajor() { return "ALPHA"; }
-string getVersionMinor() { return "2"; }
-string getVersion() { return getVersionMajor() + getVersionMinor(); }
+string getVersionMinor() { return "3"; }
+string getVersion() { return getVersionMajor() + "." + getVersionMinor(); }
