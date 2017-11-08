@@ -20,9 +20,22 @@
 #define BOT_H
 
 #include "action.h"
+#include "flags.h"
+
+class Memory {
+  public:
+    vector<FlaggedAction> f_certain_actions;
+    vector<FlaggedVariable> f_certain_variables;
+    vector<FlaggedAction> f_uncertain_actions;
+    vector<FlaggedVariable> f_uncertain_variables;
+    vector<Action> p_saved_actions;
+    vector<Action> n_saved_actions;
+    vector<PreAction> m_preactions;
+}
 
 class KelsierBot { 
-
+  private:
+    Memory currentMemory; 
 };
 
 #endif
