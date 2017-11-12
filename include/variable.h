@@ -41,7 +41,13 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
 using namespace std;
 
-#define VariableTemplate vector<string>
-#define VariableSet map<string,bool>
+class Variable {
+  public:
+    string name;
+    int value;
+    public Variable(string,int); 
+};
+
+#define VariableSet vector<Variable>
 
 #endif

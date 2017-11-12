@@ -38,7 +38,7 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 #include "variable.h"
 #include <vector>
 
-typedef bool (*Method)(int);
+typedef int (*Method)(int);
 
 class PreAction {
   public:

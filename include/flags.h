@@ -21,12 +21,21 @@
 
 #include "action.h"
 
+enum class FlagType {
+  OK,
+  FlaggedVariablePos,
+  FlaggedVariableBad,
+  Bad 
+}
+
 class FlaggedAction {
   public:
-    Method m;
+    Action a;
     int val;
-    bool good;
-    FlaggedAction(Method me, int v, bool g);
+    FlagType flag;
+    Variable vs;    
+    FlaggedAction(Method me, int v, FlagType f);
+    FlaggedAction(Method me, int v,
 };
 
 class FlaggedVariable {

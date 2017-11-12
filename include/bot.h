@@ -35,7 +35,14 @@ class Memory {
 
 class KelsierBot { 
   private:
-    Memory currentMemory; 
+    Memory currentMemory;
+    vector<Memory> pastMemories;
+    int currentStep = 0; 
+  public:
+    KelsierBot(string previousMemLocation);
+    void loadPreactions(vector<PreAction> preactions); 
+    void executeStep();
+    int getCurrentStep();
 };
 
 #endif
