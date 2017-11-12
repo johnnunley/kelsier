@@ -46,6 +46,7 @@ class Variable {
     string name;
     int value;
     public Variable(string,int); 
+    static Variable Null ("NULL",-1);
 };
 
 #define VariableSet vector<Variable>

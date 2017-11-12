@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  flags.cpp
+ *       Filename:  variable.cpp
  *
  *    Description:  
  *
  *        Version:  1.0
- *        Created:  11/07/2017 10:27:31 AM
+ *        Created:  11/11/2017 06:38:20 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -16,8 +16,6 @@
  * =====================================================================================
  */
 
-#include "flags.h"
+#include "variable.h"
 
-FlaggedAction::FlaggedAction(Action a, FlagType f) : action(a), flag(f), vs(Variable::Null) { }
-
-FlaggedAction::FlaggedAction(Action a, FlagType f, Variable v) : action(a), flag(f), vs(v) { }
+Variable::Variable(string s, int i) : name(s), int(i) { }

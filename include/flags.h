@@ -30,21 +30,13 @@ enum class FlagType {
 
 class FlaggedAction {
   public:
-    Action a;
-    int val;
+    Action action;
     FlagType flag;
-    Variable vs;    
-    FlaggedAction(Method me, int v, FlagType f);
-    FlaggedAction(Method me, int v,
+    Variable var;    
+    FlaggedAction(Action a, FlagType f);
+    FlaggedAction(Action a FlagType f, Variable vs);
 };
 
-class FlaggedVariable {
-  public:
-    string varname;
-    bool varvalue;
-    bool good;
-    FlaggedVariable(string n, bool v, bool g);
-    FlaggedVariable getOpposite();
-};
+
 
 #endif
