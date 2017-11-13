@@ -24,13 +24,10 @@
 
 class Memory {
   public:
-    vector<FlaggedAction> f_certain_actions;
-    vector<FlaggedVariable> f_certain_variables;
-    vector<FlaggedAction> f_uncertain_actions;
-    vector<FlaggedVariable> f_uncertain_variables;
-    vector<Action> p_saved_actions;
-    vector<Action> n_saved_actions;
-    vector<PreAction> m_preactions;
+    vector<FlaggedAction> flaggedActions;
+    vector<Action> posActions;
+    vector<Action> negActions;
+    vector<PreAction> preActionList; 
 }
 
 class KelsierBot { 

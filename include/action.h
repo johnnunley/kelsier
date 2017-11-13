@@ -43,17 +43,19 @@ typedef int (*Method)(int);
 class PreAction {
   public:
     Method method;
-    VariableSet variables;
-    PreAction(Method m);
+    int var;
+    PreAction(Method m, int v);
 };
 
 class Action {
   public:
     Method method; 
+    int var;
     VariableSet variables;
     int score;
-    Action(Method m, int s);
+    Action(Method m, int v, int s);
     Action(PreAction pa, int s);
+    PreAction getPreAction();
 };
 
 #endif

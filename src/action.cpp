@@ -34,8 +34,13 @@ along with Kelsier.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "action.h"
 
-PreAction::PreAction(Method m) : method(m) { }
+PreAction::PreAction(Method m, int v) : method(m), var(v) { }
 
-Action::Action(Method m, int s) : method(m), score(s) { }
+Action::Action(Method m, int v, int s) : method(m), score(s), var(v) { }
 
-Action::Action(PreAction pa, int s) : method(pa.method), score(s) { variables = pa.variables; }
+Action::Action(PreAction pa, int s) : method(pa.method), var(pa.var), score(s) { }
+
+PreAction Action::getPreAction() {
+  PreAction pa (method,var);
+  return pa;
+}
