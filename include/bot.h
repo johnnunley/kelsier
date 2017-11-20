@@ -27,7 +27,9 @@ class Memory {
     vector<FlaggedAction> flaggedActions;
     vector<Action> posActions;
     vector<Action> negActions;
-    vector<PreAction> preActionList; 
+    vector<PreAction> preActionList;
+    static Memory loadFromFile(string file);
+    void saveToFile(string file); 
 }
 
 class KelsierBot { 

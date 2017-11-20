@@ -37,6 +37,11 @@ class FlaggedAction {
     FlaggedAction(Action a FlagType f, Variable vs);
 };
 
-
+class MultiFlaggedAction : public FlaggedAction {
+  public:
+    vector<FlaggedAction> actions;
+    MultiFlaggedAction(vector<FlaggedAction> as);
+    MultiFlaggedAction(vector<FlaggedAction> as, Variable vs);
+};
 
 #endif

@@ -34,6 +34,6 @@ class TwoVectors {
 template <class T>
 TwoVectors<T> splitVector(vector<T> list, bool (*sorter)(T));
 
-
+void writeStringToFile(string filename, string input);
 
 #endif
